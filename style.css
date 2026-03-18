@@ -347,6 +347,11 @@ footer {
   max-width: 100%;
 }
 
+.symbol-grid div img.hexagon-img {
+  width: 280px;
+  max-width: 130%;
+}
+
 /* --- Responsive --- */
 
 @media (max-width: 600px) {
