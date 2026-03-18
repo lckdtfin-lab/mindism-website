@@ -326,6 +326,27 @@ footer {
   text-decoration: underline;
 }
 
+/* --- Symbol Grid (4 images row) --- */
+
+.symbol-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 750px;
+  text-align: center;
+}
+
+.symbol-grid div p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9em;
+}
+
+.symbol-grid div img {
+  width: 140px;
+  max-width: 100%;
+}
+
 /* --- Responsive --- */
 
 @media (max-width: 600px) {
@@ -334,4 +355,14 @@ footer {
   main { padding: 1.5rem 1rem 3rem; }
   nav .nav-inner { padding: 0.5rem 1rem; }
   .hero-image { max-width: 100%; }
+
+  .symbol-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+    max-width: 320px;
+  }
+
+  .symbol-grid div img {
+    width: 120px;
+  }
 }
