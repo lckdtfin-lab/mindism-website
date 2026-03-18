@@ -343,7 +343,7 @@ footer {
 }
 
 .symbol-grid div img {
-  width: 140px;
+  width: 210px;
   max-width: 100%;
 }
 
@@ -359,10 +359,14 @@ footer {
   .symbol-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem 1rem;
-    max-width: 320px;
+    max-width: 380px;
+  }
+
+  .symbol-grid div {
+    text-align: center;
   }
 
   .symbol-grid div img {
-    width: 120px;
+    width: 150px;
   }
 }
