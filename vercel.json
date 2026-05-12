@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api/stripe-webhook.js": {
+      "includeFiles": "downloads/**",
+      "maxDuration": 30
+    }
+  }
+}
