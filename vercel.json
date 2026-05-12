@@ -4,5 +4,12 @@
       "includeFiles": "downloads/**",
       "maxDuration": 30
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/downloads/the-book-of-mindism.pdf",
+      "destination": "/the-book.html",
+      "permanent": false
+    }
+  ]
 }
