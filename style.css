@@ -259,6 +259,30 @@ blockquote .attribution {
   display: block;
 }
 
+/* --- Purchase block --- */
+
+.purchase-block {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 560px;
+  text-align: center;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+}
+
+.purchase-block h2 {
+  margin: 0 0 1rem;
+}
+
+.purchase-placeholder {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+
 /* --- Enter link / CTA --- */
 
 .enter-link {
