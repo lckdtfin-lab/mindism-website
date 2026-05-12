@@ -283,6 +283,34 @@ blockquote .attribution {
   background: var(--bg);
 }
 
+.purchase-price {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--accent);
+}
+
+.purchase-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: var(--accent);
+  color: #f0ece4;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.purchase-button:hover {
+  opacity: 0.9;
+}
+
+.purchase-note {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
 /* --- Enter link / CTA --- */
 
 .enter-link {
