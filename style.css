@@ -311,6 +311,55 @@ blockquote .attribution {
   color: var(--text-muted);
 }
 
+/* --- Thank You page --- */
+
+.thank-you-card {
+  max-width: 620px;
+  margin: 4rem auto;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--gold);
+}
+
+.thank-you-mark {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.5rem;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+  font-size: 2.4rem;
+  line-height: 68px;
+}
+
+.thank-you-card h1 {
+  border-bottom: none;
+  margin: 0 0 0.5rem;
+  padding-bottom: 0;
+}
+
+.thank-you-lede {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.thank-you-body {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.thank-you-body p {
+  margin-bottom: 1rem;
+}
+
+.thank-you-card .enter-link {
+  margin-top: 0.5rem;
+}
+
 /* --- Enter link / CTA --- */
 
 .enter-link {
