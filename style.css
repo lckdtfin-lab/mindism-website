@@ -290,6 +290,21 @@ blockquote .attribution {
   color: var(--accent);
 }
 
+.purchase-price-equiv {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.book-cover {
+  display: block;
+  max-width: 280px;
+  width: 60%;
+  margin: 2rem auto;
+  border: 1px solid var(--border);
+}
+
 .purchase-button {
   display: inline-block;
   padding: 0.8rem 2rem;
