@@ -305,6 +305,15 @@ blockquote .attribution {
   border: 1px solid var(--border);
 }
 
+.book-contents {
+  max-width: var(--max-width);
+  margin: 1.5rem auto 0;
+  text-align: center;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
 .purchase-button {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -324,6 +333,33 @@ blockquote .attribution {
   margin: 1rem 0 0;
   font-size: 0.9rem;
   color: var(--text-muted);
+}
+
+.reading-list {
+  max-width: var(--max-width);
+  margin: 3rem auto;
+}
+
+.reading-list h2 {
+  text-align: center;
+}
+
+.reading-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.reading-list li {
+  margin: 0 0 1rem;
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.reading-list li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 /* --- Thank You page --- */

@@ -55,7 +55,7 @@ export default async function handler(req, res) {
     from: fromAddress,
     to: customerEmail,
     subject: 'Your copy of The Book of Mindism',
-    text: `Hi ${customerName},\n\nThank you for your purchase. The Book of Mindism is attached to this email as a PDF.\n\nKeep this email — you can re-download the book any time by reopening the attachment.\n\nWith thanks,\nHarry Weinberg`,
+    text: `Hi ${customerName},\n\nThank you for your purchase. The Book of Mindism and some fascinating AI conversations are attached to this email as a PDF.`,
     attachments: [
       {
         filename: 'The-Book-of-Mindism.pdf',
