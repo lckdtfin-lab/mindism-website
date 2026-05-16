@@ -10,6 +10,11 @@
       "source": "/downloads/the-book-of-mindism.pdf",
       "destination": "/the-book.html",
       "permanent": false
+    },
+    {
+      "source": "/downloads/ai-discussions/:path*",
+      "destination": "/the-book.html",
+      "permanent": false
     }
   ]
 }

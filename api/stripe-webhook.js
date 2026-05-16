@@ -1,7 +1,30 @@
 import Stripe from 'stripe';
 import { Resend } from 'resend';
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
+
+async function loadAttachments() {
+  const downloadsDir = path.join(process.cwd(), 'downloads');
+  const aiDir = path.join(downloadsDir, 'ai-discussions');
+
+  const bookPath = path.join(downloadsDir, 'the-book-of-mindism.pdf');
+  const bookBuffer = await readFile(bookPath);
+
+  const attachments = [
+    {
+      filename: 'The Book of Mindism (169 pages).pdf',
+      content: bookBuffer.toString('base64'),
+    },
+  ];
+
+  const aiFiles = (await readdir(aiDir)).filter(f => f.toLowerCase().endsWith('.pdf')).sort();
+  for (const name of aiFiles) {
+    const buf = await readFile(path.join(aiDir, name));
+    attachments.push({ filename: name, content: buf.toString('base64') });
+  }
+
+  return attachments;
+}
 
 export const config = {
   api: { bodyParser: false },
@@ -48,20 +71,16 @@ export default async function handler(req, res) {
     return res.status(200).json({ received: true, error: 'no email' });
   }
 
-  const pdfPath = path.join(process.cwd(), 'downloads', 'the-book-of-mindism.pdf');
-  const pdfBuffer = await readFile(pdfPath);
+  const attachments = await loadAttachments();
+  const replyTo = process.env.MAIL_REPLY_TO;
 
   const { error } = await resend.emails.send({
     from: fromAddress,
     to: customerEmail,
+    ...(replyTo ? { reply_to: replyTo } : {}),
     subject: 'Your copy of The Book of Mindism',
-    text: `Hi ${customerName},\n\nThank you for your purchase. The Book of Mindism and some fascinating AI conversations are attached to this email as a PDF.`,
-    attachments: [
-      {
-        filename: 'The-Book-of-Mindism.pdf',
-        content: pdfBuffer.toString('base64'),
-      },
-    ],
+    text: `Hi ${customerName},\n\nThank you for your purchase. The Book of Mindism and some fascinating AI conversations are attached to this email as a PDF.\n\nEmail me if you would like more articles as and when I write them. No extra cost. Information should not come at a price.\n\n— Harry Weinberg`,
+    attachments,
   });
 
   if (error) {
