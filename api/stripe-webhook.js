@@ -79,7 +79,7 @@ export default async function handler(req, res) {
     to: customerEmail,
     ...(replyTo ? { reply_to: replyTo } : {}),
     subject: 'Your copy of The Book of Mindism',
-    text: `Hi ${customerName},\n\nThank you for your purchase. The Book of Mindism and some fascinating AI conversations are attached to this email as a PDF.\n\nEmail me if you would like more articles as and when I write them. No extra cost. Information should not come at a price.\n\n— Harry Weinberg`,
+    text: `Hi ${customerName},\n\nThank you for your purchase. The Book of Mindism and some fascinating AI conversations are attached to this email as a PDF.\n\nIf you don't see this email within a few minutes, please check your spam or junk folder.\n\nFor any questions about your purchase, or if you would like more articles as and when I write them, email me at spiart@tuta.com. No extra cost. Information should not come at a price.\n\n— Harry Weinberg`,
     attachments,
   });
 
