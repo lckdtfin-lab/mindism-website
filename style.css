@@ -508,6 +508,41 @@ footer {
 }
 
 
+/* --- Mind Ladder (Introduction) --- */
+
+.mind-ladder {
+  text-align: center;
+  max-width: 480px;
+  margin: 2rem auto;
+}
+
+.mind-ladder p {
+  margin-bottom: 0.4rem;
+}
+
+.mind-ladder-arrow {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+/* --- Glossary --- */
+
+.glossary h3 {
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3rem;
+}
+
+.glossary dt {
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 1rem;
+}
+
+.glossary dd {
+  margin: 0.3rem 0 1rem 0;
+}
+
 /* --- Responsive --- */
 
 @media (max-width: 600px) {
